@@ -124,9 +124,9 @@ export const Scene02FileCards: React.FC = () => {
           transform: 'translateX(-50%)',
           opacity: subtitleVisible ? subtitleOpacity : 0,
           fontFamily: interFont,
-          fontSize: 20,
-          fontWeight: 400,
-          color: '#64748b',
+          fontSize: 24,
+          fontWeight: 500,
+          color: '#6366f1',
           whiteSpace: 'nowrap',
         }}
       >
