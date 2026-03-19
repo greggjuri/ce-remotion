@@ -26,6 +26,7 @@ interface TerminalProps {
   lines: TerminalLine[];
   startFrame?: number;
   charsPerSecond?: number;
+  outputDelayFrames?: number;
   title?: string;
   width?: string;
   height?: string;
@@ -41,6 +42,7 @@ export const Terminal: React.FC<TerminalProps> = ({
   lines,
   startFrame = 0,
   charsPerSecond = 18,
+  outputDelayFrames = 0,
   title = 'bash',
   width = '100%',
   height = '100%',
@@ -68,7 +70,11 @@ export const Terminal: React.FC<TerminalProps> = ({
       const duration = Math.ceil((line.text.length / charsPerSecond) * fps);
       lineStates.push({ line, startAt: frameOffset, duration });
       frameOffset += duration;
+    } else if (line.type === 'output') {
+      frameOffset += outputDelayFrames;
+      lineStates.push({ line, startAt: frameOffset, duration: 0 });
     } else {
+      // gap — no delay
       lineStates.push({ line, startAt: frameOffset, duration: 0 });
     }
   }
