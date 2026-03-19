@@ -36,13 +36,21 @@ export const Scene06Outro: React.FC = () => {
   });
   const subtitleVisible = frame >= 45;
 
-  // Domain — fades in at frame 90
-  const domainLocalFrame = Math.max(0, frame - 90);
-  const domainOpacity = interpolate(domainLocalFrame, [0, 25], [0, 1], {
+  // "Use it." — fades in at frame 90
+  const useItLocalFrame = Math.max(0, frame - 90);
+  const useItOpacity = interpolate(useItLocalFrame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const domainVisible = frame >= 90;
+  const useItVisible = frame >= 90;
+
+  // "Or go fuck yourself." — fades in at frame 120 (1 second after "Use it.")
+  const punchlineLocalFrame = Math.max(0, frame - 120);
+  const punchlineOpacity = interpolate(punchlineLocalFrame, [0, 25], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const punchlineVisible = frame >= 120;
 
   // Fade to white — frames 270–300
   const fadeLocalFrame = Math.max(0, frame - 270);
@@ -102,22 +110,40 @@ export const Scene06Outro: React.FC = () => {
         with Claude Code
       </div>
 
-      {/* Domain */}
+      {/* Use it. */}
       <div
         style={{
           position: 'absolute',
           top: 610,
           left: '50%',
           transform: 'translateX(-50%)',
-          opacity: domainVisible ? domainOpacity : 0,
+          opacity: useItVisible ? useItOpacity : 0,
           fontFamily: interFont,
-          fontSize: 22,
-          fontWeight: 500,
-          color: '#94a3b8',
+          fontSize: 36,
+          fontWeight: 400,
+          color: '#6366f1',
           whiteSpace: 'nowrap',
         }}
       >
-        jurigregg.com
+        Use it.
+      </div>
+
+      {/* Or go fuck yourself. */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 670,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          opacity: punchlineVisible ? punchlineOpacity : 0,
+          fontFamily: interFont,
+          fontSize: 36,
+          fontWeight: 400,
+          color: '#6366f1',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        Or go fuck yourself.
       </div>
 
       {/* Fade to white overlay */}
