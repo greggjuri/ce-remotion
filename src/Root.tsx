@@ -4,9 +4,10 @@ import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 import { loadFont as loadJetBrains } from '@remotion/google-fonts/JetBrainsMono';
 import { TerminalDemo } from './TerminalDemo';
 import { FileCardDemo } from './FileCardDemo';
+import { DiagramDemo } from './DiagramDemo';
 
 // Load fonts globally (subset to reduce network requests)
-loadInter('normal', { weights: ['400', '700'], subsets: ['latin'] });
+loadInter('normal', { weights: ['400', '600', '700'], subsets: ['latin'] });
 loadJetBrains('normal', { weights: ['400'], subsets: ['latin'] });
 
 export const RemotionRoot: React.FC = () => {
@@ -24,6 +25,14 @@ export const RemotionRoot: React.FC = () => {
         id="FileCardDemo"
         component={FileCardDemo}
         durationInFrames={180}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="DiagramDemo"
+        component={DiagramDemo}
+        durationInFrames={240}
         fps={30}
         width={1920}
         height={1080}
