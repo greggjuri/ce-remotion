@@ -33,10 +33,10 @@ const lines: TerminalLine[] = [
 ];
 
 const annotations = [
-  { text: 'What this project is', appearFrame: 80, top: 238 },
-  { text: 'Tech stack & dependencies', appearFrame: 140, top: 350 },
-  { text: 'How Claude should write code', appearFrame: 230, top: 462 },
-  { text: 'Keeps git history clean', appearFrame: 330, top: 588 },
+  { text: 'What this project is', appearFrame: 71, top: 238 },
+  { text: 'Tech stack & dependencies', appearFrame: 82, top: 350 },
+  { text: 'How Claude should write code', appearFrame: 107, top: 462 },
+  { text: 'Keeps git history clean', appearFrame: 128, top: 588 },
 ];
 
 interface AnnotationProps {
@@ -63,14 +63,25 @@ const Annotation: React.FC<AnnotationProps> = ({
     <div
       style={{
         position: 'absolute',
-        left: 1270,
+        left: 880,
         top,
         display: 'flex',
         alignItems: 'center',
-        gap: 12,
+        gap: 0,
         opacity: isVisible ? opacity : 0,
       }}
     >
+      {/* Connecting line */}
+      <div
+        style={{
+          width: 40,
+          height: 1,
+          backgroundColor: '#6366f1',
+          opacity: 0.5,
+          flexShrink: 0,
+        }}
+      />
+      {/* Dot */}
       <div
         style={{
           width: 8,
@@ -80,8 +91,10 @@ const Annotation: React.FC<AnnotationProps> = ({
           flexShrink: 0,
         }}
       />
+      {/* Text */}
       <div
         style={{
+          marginLeft: 12,
           fontFamily: interFont,
           fontSize: 16,
           fontWeight: 400,
