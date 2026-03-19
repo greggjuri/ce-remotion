@@ -126,9 +126,17 @@ Use `@remotion/google-fonts` for Inter and JetBrains Mono:
 import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 import { loadFont as loadJetBrains } from '@remotion/google-fonts/JetBrainsMono';
 
-const { fontFamily: interFont } = loadInter();
-const { fontFamily: monoFont } = loadJetBrains();
+const { fontFamily: interFont } = loadInter('normal', {
+  weights: ['400'],
+  subsets: ['latin'],
+});
+const { fontFamily: monoFont } = loadJetBrains('normal', {
+  weights: ['400'],
+  subsets: ['latin'],
+});
 ```
+
+Always pass the `'normal'` style as the first argument, plus `weights` and `subsets` to avoid ~200+ unnecessary network requests per render. Omitting these options loads every weight and subset, which triggers noisy console warnings and slows down renders.
 
 Call at the top of `Root.tsx` so fonts are available globally.
 
