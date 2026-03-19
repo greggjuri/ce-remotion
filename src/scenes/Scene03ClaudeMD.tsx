@@ -118,12 +118,12 @@ export const Scene03ClaudeMD: React.FC = () => {
   });
 
   // Caption — fades in at frame 370
-  const captionLocalFrame = Math.max(0, frame - 370);
+  const captionLocalFrame = Math.max(0, frame - 360);
   const captionOpacity = interpolate(captionLocalFrame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const captionVisible = frame >= 370;
+  const captionVisible = frame >= 360;
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#0f172a' }}>
