@@ -31,7 +31,7 @@ const nodes = [
     label: 'init file',
     sublabel: 'feature spec',
     icon: '📄',
-    enterFrame: 100,
+    enterFrame: 95,
     left: 810,
     top: 380,
     active: false,
@@ -40,7 +40,7 @@ const nodes = [
     label: 'Claude Code',
     sublabel: '/generate-prp',
     icon: '⚡',
-    enterFrame: 160,
+    enterFrame: 150,
     left: 1310,
     top: 380,
     active: true,
@@ -49,7 +49,7 @@ const nodes = [
     label: 'PRP',
     sublabel: 'reviewed & approved',
     icon: '✓',
-    enterFrame: 220,
+    enterFrame: 205,
     left: 1310,
     top: 540,
     active: false,
@@ -58,7 +58,7 @@ const nodes = [
     label: 'git push',
     sublabel: 'auto on completion',
     icon: '🚀',
-    enterFrame: 280,
+    enterFrame: 260,
     left: 810,
     top: 540,
     active: false,
@@ -67,16 +67,17 @@ const nodes = [
 
 const arrows = [
   { x1: 610, y1: 425, x2: 810, y2: 425, drawFrame: 70 },
-  { x1: 1110, y1: 425, x2: 1310, y2: 425, drawFrame: 130 },
-  { x1: 1460, y1: 470, x2: 1460, y2: 540, drawFrame: 190 },
-  { x1: 1310, y1: 585, x2: 1110, y2: 585, drawFrame: 250 },
+  { x1: 1110, y1: 425, x2: 1310, y2: 425, drawFrame: 125 },
+  { x1: 1460, y1: 470, x2: 1460, y2: 540, drawFrame: 180 },
+  { x1: 1310, y1: 585, x2: 1110, y2: 585, drawFrame: 235 },
 ];
 
 const stepLabels = [
-  { text: '1. Define the task', x: 460, y: 500, appearFrame: 300 },
-  { text: '2. Generate a PRP', x: 1460, y: 500, appearFrame: 330 },
-  { text: '3. Review & approve', x: 1460, y: 660, appearFrame: 360 },
-  { text: '4. Execute & commit', x: 960, y: 660, appearFrame: 390 },
+  { text: '1. Define the task', x: 460, y: 500, appearFrame: 55 },
+  { text: '2. Spec the feature', x: 960, y: 500, appearFrame: 110 },
+  { text: '3. Generate a PRP', x: 1460, y: 500, appearFrame: 165 },
+  { text: '4. Review & approve', x: 1460, y: 660, appearFrame: 220 },
+  { text: '5. Execute & commit', x: 960, y: 660, appearFrame: 275 },
 ];
 
 export const Scene04PRPFlow: React.FC = () => {
@@ -91,13 +92,13 @@ export const Scene04PRPFlow: React.FC = () => {
   const headlineScale = interpolate(headlineProgress, [0, 1], [0.92, 1]);
   const headlineOpacity = headlineProgress;
 
-  // Caption — fades in at frame 440
-  const captionLocalFrame = Math.max(0, frame - 440);
+  // Caption — fades in at frame 310
+  const captionLocalFrame = Math.max(0, frame - 310);
   const captionOpacity = interpolate(captionLocalFrame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const captionVisible = frame >= 440;
+  const captionVisible = frame >= 310;
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#f8fafc', position: 'relative' }}>
