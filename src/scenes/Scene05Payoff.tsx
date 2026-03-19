@@ -153,7 +153,7 @@ export const Scene05Payoff: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 900,
+          top: 940,
           left: '50%',
           transform: 'translateX(-50%)',
           opacity: captionVisible ? captionOpacity : 0,
