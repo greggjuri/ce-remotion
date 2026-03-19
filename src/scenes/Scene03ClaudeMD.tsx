@@ -34,9 +34,9 @@ const lines: TerminalLine[] = [
 
 const annotations = [
   { text: 'What this project is', appearFrame: 71, top: 238 },
-  { text: 'Tech stack & dependencies', appearFrame: 82, top: 350 },
-  { text: 'How Claude should write code', appearFrame: 107, top: 462 },
-  { text: 'Keeps git history clean', appearFrame: 128, top: 588 },
+  { text: 'Tech stack & dependencies', appearFrame: 112, top: 350 },
+  { text: 'How Claude should write code', appearFrame: 167, top: 462 },
+  { text: 'Keeps git history clean', appearFrame: 218, top: 588 },
 ];
 
 interface AnnotationProps {
@@ -157,6 +157,7 @@ export const Scene03ClaudeMD: React.FC = () => {
           lines={lines}
           startFrame={40}
           charsPerSecond={22}
+          inputDelayFrames={30}
           title="CLAUDE.md"
           width="900px"
           height="560px"
