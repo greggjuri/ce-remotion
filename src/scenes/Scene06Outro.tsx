@@ -44,16 +44,16 @@ export const Scene06Outro: React.FC = () => {
   });
   const useItVisible = frame >= 90;
 
-  // "Or go fuck yourself." — fades in at frame 120 (1 second after "Use it.")
-  const punchlineLocalFrame = Math.max(0, frame - 120);
+  // "Or go fuck yourself." — fades in at frame 180 (3 seconds after "Use it.")
+  const punchlineLocalFrame = Math.max(0, frame - 180);
   const punchlineOpacity = interpolate(punchlineLocalFrame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const punchlineVisible = frame >= 120;
+  const punchlineVisible = frame >= 180;
 
-  // Fade to white — frames 270–300
-  const fadeLocalFrame = Math.max(0, frame - 270);
+  // Fade to white — 0.5 seconds (15 frames) after punchline starts: frames 195–225
+  const fadeLocalFrame = Math.max(0, frame - 195);
   const fadeOpacity = interpolate(fadeLocalFrame, [0, 30], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -147,7 +147,7 @@ export const Scene06Outro: React.FC = () => {
       </div>
 
       {/* Fade to white overlay */}
-      {frame >= 270 && (
+      {frame >= 195 && (
         <AbsoluteFill
           style={{
             backgroundColor: '#ffffff',

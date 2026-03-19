@@ -13,7 +13,7 @@ const TIMINGS = {
   scene03: { from: 600, duration: 645 },
   scene04: { from: 1245, duration: 600 },
   scene05: { from: 1845, duration: 450 },
-  scene06: { from: 2295, duration: 300 },
+  scene06: { from: 2295, duration: 225 },
 };
 
 export const Master: React.FC = () => {
