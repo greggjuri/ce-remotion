@@ -120,7 +120,7 @@ export const Scene05Payoff: React.FC = () => {
         <div
           style={{
             position: 'absolute',
-            top: 520,
+            top: 420,
             left: '50%',
             transform: 'translateX(-50%)',
             width: 1200,
@@ -138,7 +138,7 @@ export const Scene05Payoff: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 870,
+          top: 920,
           left: '50%',
           transform: `translateX(-50%) translateY(${checkVisible ? checkTranslateY : 20}px)`,
           opacity: checkVisible ? checkOpacity : 0,
@@ -153,7 +153,7 @@ export const Scene05Payoff: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 940,
+          top: 1000,
           left: '50%',
           transform: 'translateX(-50%)',
           opacity: captionVisible ? captionOpacity : 0,
