@@ -5,7 +5,7 @@ import { Scene02FileCards } from './scenes/Scene02FileCards';
 
 const TIMINGS = {
   scene01: { from: 0, duration: 330 },
-  scene02: { from: 330, duration: 210 },
+  scene02: { from: 330, duration: 270 },
   // remaining scenes added in future PRPs
 };
 

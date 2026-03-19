@@ -60,7 +60,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Scene02"
         component={Scene02FileCards}
-        durationInFrames={210}
+        durationInFrames={270}
         fps={30}
         width={1920}
         height={1080}
@@ -68,7 +68,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Master"
         component={Master}
-        durationInFrames={540}
+        durationInFrames={600}
         fps={30}
         width={1920}
         height={1080}
