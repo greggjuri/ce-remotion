@@ -9,6 +9,7 @@ import { CodeDiffDemo } from './CodeDiffDemo';
 import { Scene01Problem } from './scenes/Scene01Problem';
 import { Scene02FileCards } from './scenes/Scene02FileCards';
 import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
+import { Scene04PRPFlow } from './scenes/Scene04PRPFlow';
 import { Master } from './Master';
 
 // Load fonts globally (subset to reduce network requests)
@@ -75,9 +76,17 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
       <Composition
+        id="Scene04"
+        component={Scene04PRPFlow}
+        durationInFrames={600}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
         id="Master"
         component={Master}
-        durationInFrames={1245}
+        durationInFrames={1845}
         fps={30}
         width={1920}
         height={1080}
