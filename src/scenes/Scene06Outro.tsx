@@ -57,7 +57,7 @@ export const Scene06Outro: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 420,
+          top: 340,
           left: '50%',
           transform: 'translateX(-50%)',
           width: lineWidth,
@@ -70,7 +70,7 @@ export const Scene06Outro: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 500,
+          top: 400,
           left: '50%',
           transform: 'translateX(-50%)',
           opacity: titleVisible ? titleOpacity : 0,
@@ -88,7 +88,7 @@ export const Scene06Outro: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 580,
+          top: 530,
           left: '50%',
           transform: 'translateX(-50%)',
           opacity: subtitleVisible ? subtitleOpacity : 0,
@@ -106,7 +106,7 @@ export const Scene06Outro: React.FC = () => {
       <div
         style={{
           position: 'absolute',
-          top: 660,
+          top: 610,
           left: '50%',
           transform: 'translateX(-50%)',
           opacity: domainVisible ? domainOpacity : 0,
