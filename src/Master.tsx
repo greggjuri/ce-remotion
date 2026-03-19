@@ -5,6 +5,7 @@ import { Scene02FileCards } from './scenes/Scene02FileCards';
 import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
 import { Scene04PRPFlow } from './scenes/Scene04PRPFlow';
 import { Scene05Payoff } from './scenes/Scene05Payoff';
+import { Scene06Outro } from './scenes/Scene06Outro';
 
 const TIMINGS = {
   scene01: { from: 0, duration: 330 },
@@ -12,7 +13,7 @@ const TIMINGS = {
   scene03: { from: 600, duration: 645 },
   scene04: { from: 1245, duration: 600 },
   scene05: { from: 1845, duration: 450 },
-  // remaining scenes added in future PRPs
+  scene06: { from: 2295, duration: 300 },
 };
 
 export const Master: React.FC = () => {
@@ -47,6 +48,12 @@ export const Master: React.FC = () => {
         durationInFrames={TIMINGS.scene05.duration}
       >
         <Scene05Payoff />
+      </Sequence>
+      <Sequence
+        from={TIMINGS.scene06.from}
+        durationInFrames={TIMINGS.scene06.duration}
+      >
+        <Scene06Outro />
       </Sequence>
     </AbsoluteFill>
   );
