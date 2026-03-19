@@ -3,7 +3,7 @@ import { Sequence, AbsoluteFill } from 'remotion';
 import { Scene01Problem } from './scenes/Scene01Problem';
 
 const TIMINGS = {
-  scene01: { from: 0, duration: 240 },
+  scene01: { from: 0, duration: 330 },
   // remaining scenes added in future PRPs
 };
 
