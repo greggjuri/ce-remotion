@@ -4,12 +4,14 @@ import { Scene01Problem } from './scenes/Scene01Problem';
 import { Scene02FileCards } from './scenes/Scene02FileCards';
 import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
 import { Scene04PRPFlow } from './scenes/Scene04PRPFlow';
+import { Scene05Payoff } from './scenes/Scene05Payoff';
 
 const TIMINGS = {
   scene01: { from: 0, duration: 330 },
   scene02: { from: 330, duration: 270 },
   scene03: { from: 600, duration: 645 },
   scene04: { from: 1245, duration: 600 },
+  scene05: { from: 1845, duration: 450 },
   // remaining scenes added in future PRPs
 };
 
@@ -39,6 +41,12 @@ export const Master: React.FC = () => {
         durationInFrames={TIMINGS.scene04.duration}
       >
         <Scene04PRPFlow />
+      </Sequence>
+      <Sequence
+        from={TIMINGS.scene05.from}
+        durationInFrames={TIMINGS.scene05.duration}
+      >
+        <Scene05Payoff />
       </Sequence>
     </AbsoluteFill>
   );

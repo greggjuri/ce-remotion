@@ -10,6 +10,7 @@ import { Scene01Problem } from './scenes/Scene01Problem';
 import { Scene02FileCards } from './scenes/Scene02FileCards';
 import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
 import { Scene04PRPFlow } from './scenes/Scene04PRPFlow';
+import { Scene05Payoff } from './scenes/Scene05Payoff';
 import { Master } from './Master';
 
 // Load fonts globally (subset to reduce network requests)
@@ -84,9 +85,17 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
       <Composition
+        id="Scene05"
+        component={Scene05Payoff}
+        durationInFrames={450}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
         id="Master"
         component={Master}
-        durationInFrames={1845}
+        durationInFrames={2295}
         fps={30}
         width={1920}
         height={1080}
