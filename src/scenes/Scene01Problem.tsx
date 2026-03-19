@@ -19,7 +19,8 @@ const lines: TerminalLine[] = [
   { type: 'input', text: 'claude "refactor the auth module"' },
   { type: 'output', text: 'Sure! What framework are you using?' },
   { type: 'output', text: 'What does your folder structure look like?' },
-  { type: 'output', text: 'I need more context to help you.' },
+  { type: 'output', text: 'Any specific patterns you want me to follow?' },
+  { type: 'output', text: 'What are your naming conventions?' },
 ];
 
 export const Scene01Problem: React.FC = () => {
@@ -91,7 +92,7 @@ export const Scene01Problem: React.FC = () => {
           textAlign: 'center',
         }}
       >
-        AI without context is just autocomplete.
+        Every session. The same questions. Every time.
       </div>
     </AbsoluteFill>
   );
