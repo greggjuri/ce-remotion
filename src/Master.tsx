@@ -7,7 +7,7 @@ import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
 const TIMINGS = {
   scene01: { from: 0, duration: 330 },
   scene02: { from: 330, duration: 270 },
-  scene03: { from: 600, duration: 675 },
+  scene03: { from: 600, duration: 645 },
   // remaining scenes added in future PRPs
 };
 

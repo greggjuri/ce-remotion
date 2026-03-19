@@ -69,7 +69,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Scene03"
         component={Scene03ClaudeMD}
-        durationInFrames={675}
+        durationInFrames={645}
         fps={30}
         width={1920}
         height={1080}
@@ -77,7 +77,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Master"
         component={Master}
-        durationInFrames={1275}
+        durationInFrames={1245}
         fps={30}
         width={1920}
         height={1080}
