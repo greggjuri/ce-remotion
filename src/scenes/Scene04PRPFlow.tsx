@@ -73,10 +73,10 @@ const arrows = [
 ];
 
 const stepLabels = [
-  { text: '1. Define the task', x: 460, y: 680, appearFrame: 300 },
-  { text: '2. Generate a PRP', x: 1460, y: 680, appearFrame: 330 },
-  { text: '3. Review & approve', x: 1460, y: 740, appearFrame: 360 },
-  { text: '4. Execute & commit', x: 960, y: 740, appearFrame: 390 },
+  { text: '1. Define the task', x: 460, y: 500, appearFrame: 300 },
+  { text: '2. Generate a PRP', x: 1460, y: 500, appearFrame: 330 },
+  { text: '3. Review & approve', x: 1460, y: 660, appearFrame: 360 },
+  { text: '4. Execute & commit', x: 960, y: 660, appearFrame: 390 },
 ];
 
 export const Scene04PRPFlow: React.FC = () => {
