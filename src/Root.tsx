@@ -8,6 +8,7 @@ import { DiagramDemo } from './DiagramDemo';
 import { CodeDiffDemo } from './CodeDiffDemo';
 import { Scene01Problem } from './scenes/Scene01Problem';
 import { Scene02FileCards } from './scenes/Scene02FileCards';
+import { Scene03ClaudeMD } from './scenes/Scene03ClaudeMD';
 import { Master } from './Master';
 
 // Load fonts globally (subset to reduce network requests)
@@ -66,9 +67,17 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
       <Composition
+        id="Scene03"
+        component={Scene03ClaudeMD}
+        durationInFrames={450}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
         id="Master"
         component={Master}
-        durationInFrames={600}
+        durationInFrames={1050}
         fps={30}
         width={1920}
         height={1080}
