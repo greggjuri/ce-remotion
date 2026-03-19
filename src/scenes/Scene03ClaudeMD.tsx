@@ -34,9 +34,9 @@ const lines: TerminalLine[] = [
 
 const annotations = [
   { text: 'What this project is', appearFrame: 71, top: 238 },
-  { text: 'Tech stack & dependencies', appearFrame: 112, top: 350 },
-  { text: 'How Claude should write code', appearFrame: 167, top: 462 },
-  { text: 'Keeps git history clean', appearFrame: 218, top: 588 },
+  { text: 'Tech stack & dependencies', appearFrame: 142, top: 350 },
+  { text: 'How Claude should write code', appearFrame: 227, top: 462 },
+  { text: 'Keeps git history clean', appearFrame: 308, top: 588 },
 ];
 
 interface AnnotationProps {
@@ -118,12 +118,12 @@ export const Scene03ClaudeMD: React.FC = () => {
   });
 
   // Caption — fades in at frame 370
-  const captionLocalFrame = Math.max(0, frame - 360);
+  const captionLocalFrame = Math.max(0, frame - 315);
   const captionOpacity = interpolate(captionLocalFrame, [0, 25], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const captionVisible = frame >= 360;
+  const captionVisible = frame >= 315;
 
   return (
     <AbsoluteFill style={{ backgroundColor: '#0f172a' }}>
@@ -157,7 +157,7 @@ export const Scene03ClaudeMD: React.FC = () => {
           lines={lines}
           startFrame={40}
           charsPerSecond={22}
-          inputDelayFrames={30}
+          inputDelayFrames={60}
           title="CLAUDE.md"
           width="900px"
           height="560px"
